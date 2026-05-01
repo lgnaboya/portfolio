@@ -1,22 +1,16 @@
 import { useEffect, useRef, useState } from "react";
 import GameProjectCard3D from "./GameProjectCard3D";
 
-interface ProjectLink {
-  label: string;
-  url: string;
-}
-
-interface GameProject {
+interface GalleryProject {
   title: string;
-  date: string;
-  description: string;
-  features: string[];
-  links?: ProjectLink[];
-  imageBackground: string;
+  subtitle?: string;
+  description?: string;
+  imageBackground?: string;
+  slug: string;
 }
 
 interface CircularGallery3DProps {
-  projects: GameProject[];
+  projects: GalleryProject[];
 }
 
 const CircularGallery3D = ({ projects }: CircularGallery3DProps) => {
