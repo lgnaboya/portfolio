@@ -1,42 +1,68 @@
-#root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
+/* =========================
+   GLOBAL APP LAYOUT
+========================= */
+
+.app-shell {
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  position: relative;
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
+/* =========================
+   OPTIONAL PREMIUM EFFECTS
+========================= */
+
+.noise-overlay {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  opacity: 0.04;
+  mix-blend-mode: soft-light;
 }
 
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
+.radial-glow-left {
+  position: absolute;
+  width: 600px;
+  height: 600px;
+  left: -200px;
+  bottom: -200px;
+  border-radius: 9999px;
+  background: rgba(0, 255, 255, 0.08);
+  filter: blur(120px);
+  pointer-events: none;
+}
+
+.radial-glow-right {
+  position: absolute;
+  width: 600px;
+  height: 600px;
+  right: -200px;
+  top: -200px;
+  border-radius: 9999px;
+  background: rgba(168, 85, 247, 0.14);
+  filter: blur(120px);
+  pointer-events: none;
+}
+
+/* =========================
+   ANIMATIONS
+========================= */
+
+@keyframes float {
+  0% {
+    transform: translateY(0px);
   }
-  to {
-    transform: rotate(360deg);
+
+  50% {
+    transform: translateY(-10px);
+  }
+
+  100% {
+    transform: translateY(0px);
   }
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
-}
-
-.card {
-  padding: 2em;
-}
-
-.read-the-docs {
-  color: #888;
+.float {
+  animation: float 6s ease-in-out infinite;
 }

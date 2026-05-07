@@ -2,75 +2,118 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
-All colors MUST be HSL.
-*/
+/* =========================
+   DESIGN SYSTEM
+========================= */
 
 @layer base {
   :root {
-    --background: 240 10% 3.9%;
+    --background: 240 45% 5%;
     --foreground: 0 0% 98%;
 
-    --card: 240 10% 8%;
+    --card: 240 35% 10%;
     --card-foreground: 0 0% 98%;
 
-    --popover: 240 10% 8%;
+    --popover: 240 35% 10%;
     --popover-foreground: 0 0% 98%;
 
-    --primary: 263 70% 50%;
-    --primary-foreground: 0 0% 100%;
+    --primary: 268 100% 72%;
+    --primary-foreground: 240 10% 5%;
 
-    --secondary: 240 5% 15%;
-    --secondary-foreground: 0 0% 98%;
+    --secondary: 190 100% 65%;
+    --secondary-foreground: 240 10% 5%;
 
-    --muted: 240 5% 15%;
-    --muted-foreground: 240 5% 65%;
+    --muted: 240 15% 18%;
+    --muted-foreground: 240 8% 70%;
 
-    --accent: 180 100% 50%;
-    --accent-foreground: 240 10% 3.9%;
+    --accent: 190 100% 65%;
+    --accent-foreground: 240 10% 5%;
 
-    --destructive: 0 62.8% 30.6%;
+    --destructive: 0 75% 60%;
     --destructive-foreground: 0 0% 98%;
 
-    --border: 240 10% 15%;
-    --input: 240 10% 15%;
-    --ring: 263 70% 50%;
+    --border: 0 0% 100% / 0.08;
+    --input: 0 0% 100% / 0.08;
+    --ring: 268 100% 72%;
 
-    --radius: 0.75rem;
+    --radius: 1rem;
 
-    /* Custom gradient tokens */
-    --gradient-primary: linear-gradient(135deg, hsl(263 70% 50%) 0%, hsl(180 100% 50%) 100%);
-    --gradient-card: linear-gradient(135deg, hsl(240 10% 8% / 0.6) 0%, hsl(240 10% 12% / 0.6) 100%);
-    
-    /* Glass morphism */
-    --glass-bg: hsl(240 10% 8% / 0.4);
-    --glass-border: hsl(0 0% 100% / 0.1);
-    
-    /* Shadows */
-    --shadow-glow: 0 0 30px hsl(263 70% 50% / 0.3);
-    --shadow-card: 0 10px 40px hsl(0 0% 0% / 0.5);
+    /* Glass */
+    --glass-bg: rgba(255, 255, 255, 0.04);
+    --glass-border: rgba(255, 255, 255, 0.08);
+
+    /* Glow */
+    --glow-purple: 0 0 120px rgba(168, 85, 247, 0.35);
+    --glow-cyan: 0 0 120px rgba(34, 211, 238, 0.2);
+
+    /* Background */
+    --bg-main:
+      radial-gradient(circle at 20% 70%, rgba(0, 255, 255, 0.12), transparent 30%),
+      radial-gradient(circle at 85% 20%, rgba(168, 85, 247, 0.18), transparent 30%),
+      #05010f;
   }
-}
 
-@layer base {
   * {
     @apply border-border;
+    box-sizing: border-box;
+  }
+
+  html,
+  body,
+  #root {
+    width: 100%;
+    height: 100vh;
+    margin: 0;
+    overflow: hidden;
   }
 
   body {
     @apply bg-background text-foreground;
-    font-family: 'Inter', sans-serif;
-  }
-  
-  html {
-    scroll-behavior: smooth;
+    font-family: "Inter", sans-serif;
+    background: var(--bg-main);
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
   }
 }
 
+/* =========================
+   UTILITIES
+========================= */
+
 @layer utilities {
-  .glass-card {
+  .glass {
     background: var(--glass-bg);
-    backdrop-filter: blur(12px);
+    backdrop-filter: blur(18px);
+    -webkit-backdrop-filter: blur(18px);
     border: 1px solid var(--glass-border);
+  }
+
+  .grid-bg {
+    background-image:
+      linear-gradient(rgba(255,255,255,0.03) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(255,255,255,0.03) 1px, transparent 1px);
+
+    background-size: 48px 48px;
+  }
+
+  .text-gradient {
+    background: linear-gradient(
+      135deg,
+      #ffffff 0%,
+      #c084fc 45%,
+      #67e8f9 100%
+    );
+
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+  }
+
+  .glow-purple {
+    box-shadow: var(--glow-purple);
+  }
+
+  .glow-cyan {
+    box-shadow: var(--glow-cyan);
   }
 }
