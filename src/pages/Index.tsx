@@ -2,6 +2,7 @@ import { useState } from "react";
 
 import { RadialMenu } from "@/components/portfolio/RadialMenu";
 import { SidePager } from "@/components/portfolio/SidePager";
+import { CodeBackground } from "@/components/portfolio/CodeBackground";
 
 import { sections, type SectionId } from "@/components/portfolio/data";
 
@@ -42,6 +43,8 @@ const renderSection = () => {
 
   return (
     <main className="relative w-screen h-screen overflow-hidden bg-background text-foreground grid-bg">
+
+      <CodeBackground />
 
       {/* Background glow */}
       <div className="absolute inset-0 bg-hero opacity-90" />

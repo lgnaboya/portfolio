@@ -3,7 +3,7 @@ import { TooltipProvider } from "@/components/ui/tooltip";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { Routes, Route } from "react-router-dom";
 
-import Index from "./pages/Index";
+import { Portfolio } from "@/components/portfolio/Portfolio";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -16,7 +16,7 @@ function App() {
 
           <Routes>
             {/* Home */}
-            <Route path="/" element={<Index />} />
+            <Route path="/" element={<Portfolio />} />
 
             {/* Fallback */}
             <Route path="*" element={<NotFound />} />

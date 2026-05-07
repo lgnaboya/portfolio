@@ -70,7 +70,7 @@ export function CodeBackground() {
 
         this.chars.forEach((c, i) => {
           const opacity = (1 - i / this.length) * 0.5;
-          ctx.fillStyle = `rgba(140, 120, 255, ${opacity * 0.5})`;
+          ctx.fillStyle = `rgba(140, 120, 255, ${opacity * 0.08})`;
           ctx.fillText(c, this.x, this.y - i * 18);
         });
       }
@@ -104,7 +104,7 @@ export function CodeBackground() {
 
       draw() {
         ctx.font = '14px "JetBrains Mono", monospace';
-        ctx.fillStyle = "rgba(140, 120, 255, 0.18)";
+        ctx.fillStyle = "rgba(140, 120, 255, 0.08)";
         ctx.fillText(this.text, this.x, this.y);
       }
     }
@@ -133,7 +133,7 @@ export function CodeBackground() {
 
       draw() {
         ctx.font = "10px monospace";
-        ctx.fillStyle = "rgba(120, 130, 255, 0.1)";
+        ctx.fillStyle = "rgba(120, 130, 255, 0.08)";
         ctx.fillText(this.val, this.x, this.y);
       }
     }
@@ -168,7 +168,7 @@ export function CodeBackground() {
     // Animation
     let raf: number;
     const animate = () => {
-      ctx.fillStyle = "rgba(8,6,18,0.85)";
+      ctx.fillStyle = "rgba(8,6,18,0.35)";
       ctx.fillRect(0, 0, canvas.width, canvas.height);
 
       drawGrid();
@@ -221,8 +221,12 @@ export function CodeBackground() {
 
   return (
     <>
-      <div className="fixed inset-0 -z-20 bg-[oklch(0.09_0.02_270)]" />
-      <canvas ref={canvasRef} className="fixed inset-0 -z-10 pointer-events-none" />
+      <div className="fixed inset-0 z-0 bg-[oklch(0.09_0.02_270)]" />
+
+      <canvas
+        ref={canvasRef}
+        className="fixed inset-0 z-0 pointer-events-none"
+      />
     </>
   );
 }
