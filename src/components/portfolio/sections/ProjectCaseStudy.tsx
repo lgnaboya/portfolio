@@ -1,6 +1,7 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
 import { motion } from "framer-motion";
 import { ArrowLeft, Briefcase, Calendar, Wrench, X } from "lucide-react";
+import lockerhardware from "@/assets/projects/locker-hardware.jpg";
 import type { CaseStudySection, ProblemSection, Project, StrategySection } from "../data";
 
 const TABS: { id: keyof Project["caseStudy"]; label: string }[] = [
@@ -22,7 +23,7 @@ export function ProjectCaseStudy({ project, onClose }: { project: Project; onClo
       animate={{ opacity: 1 }}
       exit={{ opacity: 0 }}
       transition={{ duration: 0.3 }}
-      className="fixed inset-0 z-60 bg-background/80 backdrop-blur-md"
+      className="fixed inset-0 z-[100] bg-background/80 backdrop-blur-md"
       onClick={onClose}
     >
       <motion.div
@@ -34,7 +35,18 @@ export function ProjectCaseStudy({ project, onClose }: { project: Project; onClo
         className="relative h-full w-full overflow-y-auto"
       >
         {/* Top bar */}
-        <div className="sticky top-0 z-20 flex items-center justify-between px-6 md:px-12 py-4 glass-strong">
+      <div
+        className="
+        sticky top-0 z-[120]
+        flex items-center justify-between
+        px-6 md:px-12 py-4
+        backdrop-blur-2xl
+        bg-background/75
+        border-b border-white/10
+        shadow-[0_8px_30px_rgba(0,0,0,0.35)]
+        supports-[backdrop-filter]:bg-background/55
+        "
+    >
           <button
             onClick={onClose}
             className="inline-flex items-center gap-2 text-xs uppercase tracking-[0.25em] text-muted-foreground hover:text-foreground transition"
@@ -136,13 +148,8 @@ export function ProjectCaseStudy({ project, onClose }: { project: Project; onClo
             <StrategyBlock section={cs.strategy} />
             <DesignBlock section={cs.design as any} />
             {cs.architecture && <ArchitectureSection />}
-            <CSBlock
-              id="impact"
-              eyebrow="Impact & Results"
-              section={cs.impact}
-              accent="from-secondary/15 to-transparent"
-            />
-            <CSBlock id="reflection" eyebrow="Reflection" section={cs.reflection} />
+            <ImpactBlock section={cs.impact as any} />
+            <ReflectionBlock section={cs.reflection as any} />
           </div>
         </div>
       </motion.div>
@@ -287,8 +294,8 @@ function StrategyBlock({ section }: { section: CaseStudySection | StrategySectio
           {section.body}
         </p>
 
-        {/* 4 Feature Cards */}
-        <div className="mt-6 grid md:grid-cols-2 gap-4">
+        {/* Feature Cards */}
+        <div className="mt-6 grid grid-cols-1 md:grid-cols-3 gap-4">
           {section.features.map((f: any, i: number) => {
             const Icon = f.icon;
             return (
@@ -393,10 +400,10 @@ function ArchitectureSection() {
             <h3 className="font-semibold text-lg">Hardware Layer</h3>
 
             {[
-              ["ESP32-S3 microcontroller", "Core control logic"],
-              ["LED indicators", "Visual feedback"],
-              ["Relay modules", "Lock actuation"],
-              ["ToF sensors + reed switches", "State detection"],
+              ["ESP32-S3 microcontroller", "Core control logic for all compartment operations"],
+              ["LED indicators", "Visual status feedback"],
+              ["Relay modules", "Electronic lock actuation"],
+              ["ToF sensors + reed switches", "Accurate state detection"],
             ].map(([title, desc]) => (
               <div key={title}>
                 <p className="text-sm font-medium">{title}</p>
@@ -411,9 +418,9 @@ function ArchitectureSection() {
 
             {[
               ["Android Studio", "App development"],
-              ["FaceNet (512-d embeddings)", "Face recognition"],
-              ["Firebase Firestore", "Realtime backend"],
-              ["Push Notifications", "System feedback"],
+              ["FaceNet (512-d embeddings)", "Biometric face recognition engine"],
+              ["Firebase Firestore", "Realtime cloud backend and user management"],
+              ["Push Notifications", "Real-time system feedback"],
             ].map(([title, desc]) => (
               <div key={title}>
                 <p className="text-sm font-medium">{title}</p>
@@ -423,31 +430,78 @@ function ArchitectureSection() {
           </div>
         </div>
 
-        {/* 2️⃣ FLOW */}
-        <div>
-          <h3 className="font-semibold mb-4">End-to-End Experience Flow</h3>
+        {/* FLOW + HARDWARE IMAGE */}
+        <div className="grid md:grid-cols-3 gap-6 items-stretch">
 
-          <div className="flex flex-wrap items-center gap-2">
-            {[
-              "Onboarding",
-              "Face Auth",
-              "Availability",
-              "Rent & Pay",
-              "Unlock",
-              "Notifications",
-              "Manage Rental",
-            ].map((step, i) => (
-              <div key={i} className="flex items-center gap-2">
-                <div className="px-3 py-2 rounded-full glass text-xs flex items-center gap-2">
-                  <span className="text-primary font-bold">{String(i + 1).padStart(2, "0")}</span>
-                  {step}
-                </div>
+        {/* FLOW */}
+        <div className="md:col-span-1 rounded-2xl glass p-6 flex flex-col">
+          <h3 className="font-sm mb-6 text-center text-sm">
+            End-to-End Experience Flow
+          </h3>
 
-                {i !== 6 && <span className="text-muted-foreground text-xs">→</span>}
-              </div>
-            ))}
+        <div className="flex flex-col items-center justify-center gap-2 flex-1">
+          {[
+            "Onboarding",
+            "Face Authentication",
+            "Real-time Availability",
+            "Rent & Pay",
+            "Unlock",
+            "Notifications & Status",
+            "Manage Rental",
+          ].map((step, i) => (
+        <div
+          key={i}
+          className="flex flex-col items-center gap-2 w-full"
+        >
+          {/* Step */}
+          <div
+            className="
+              px-4 py-2
+              rounded-full
+              glass
+              text-xs
+              flex items-center justify-center gap-2
+              w-full max-w-[220px]
+              text-center
+            "
+          >
+            <span className="text-primary font-bold">
+              {String(i + 1).padStart(2, "0")}
+            </span>
+
+            {step}
           </div>
+
+          {/* Down Arrow */}
+          {i !== 6 && (
+            <span className="text-muted-foreground/60 text-xs">
+              ↓
+            </span>
+          )}
         </div>
+      ))}
+    </div>
+  </div>
+
+        {/* HARDWARE IMAGE */}
+        <div className="md:col-span-2 relative overflow-hidden rounded-2xl border border-white/10 min-h-[420px]">
+        <img
+          src={lockerhardware}
+          alt="Hardware prototype"
+          className="absolute inset-0 w-full h-full object-contain"
+        />
+
+        {/* Overlay */}
+        <div className="absolute inset-0 bg-gradient-to-t from-background via-background/5 to-transparent" />
+
+        {/* Caption */}
+        <div className="absolute bottom-0 left-0 p-5">
+          <p className="text-[10px] uppercase tracking-[0.25em] text-primary">
+            Physical Prototype
+          </p>
+        </div>
+      </div>
+    </div>
 
         {/* 3️⃣ CONSTRAINTS BOX */}
         <div className="rounded-2xl glass p-6">
@@ -484,6 +538,184 @@ function ArchitectureSection() {
             ))}
           </div>
         </div>
+      </div>
+    </section>
+  );
+}
+
+function ImpactBlock({ section }: { section: any }) {
+  return (
+    <section id="cs-impact" className="scroll-mt-24">
+      <div className="rounded-3xl glass-strong p-6 md:p-8 overflow-hidden">
+        {/* Header */}
+        <div>
+          <p className="text-[10px] uppercase tracking-[0.3em] text-primary">
+            Impact
+          </p>
+
+          <h2 className="mt-2 text-2xl md:text-3xl font-semibold">
+            {section.title}
+          </h2>
+
+          <p className="mt-3 text-sm md:text-base text-muted-foreground max-w-2xl leading-relaxed">
+            {section.body}
+          </p>
+        </div>
+
+        {/* 2 Columns */}
+        <div className="mt-10 grid md:grid-cols-2 gap-10">
+          {/* User Value */}
+          <div>
+            <h3 className="text-xl font-semibold mb-5">
+              User Value
+            </h3>
+
+            <div className="space-y-4">
+              {section.userValue?.map((item: string, i: number) => (
+                <div key={i} className="flex items-start gap-3">
+                  <div className="w-6 h-6 rounded-full bg-primary/15 flex items-center justify-center shrink-0 mt-0.5">
+                    <span className="text-primary text-xs">✓</span>
+                  </div>
+
+                  <p className="text-sm text-muted-foreground leading-relaxed">
+                    {item}
+                  </p>
+                </div>
+              ))}
+            </div>
+          </div>
+
+          {/* Technical Outcome */}
+          <div>
+            <h3 className="text-xl font-semibold mb-5">
+              Technical Outcome
+            </h3>
+
+            <div className="space-y-4">
+              {section.technicalOutcome?.map((item: string, i: number) => (
+                <div key={i} className="flex items-start gap-3">
+                  <div className="w-6 h-6 rounded-full bg-primary/15 flex items-center justify-center shrink-0 mt-0.5">
+                    <span className="text-primary text-xs">✓</span>
+                  </div>
+
+                  <p className="text-sm text-muted-foreground leading-relaxed">
+                    {item}
+                  </p>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+
+        {/* Key Features Box */}
+        <div className="mt-10 rounded-3xl border border-white/10 p-6 md:p-8">
+          <h3 className="text-xl font-semibold">
+            Key Features Delivered
+          </h3>
+
+          <div className="mt-6 grid md:grid-cols-3 gap-4">
+            {section.features?.map((feature: any, i: number) => {
+              const Icon = feature.icon;
+
+              return (
+                <div
+                  key={i}
+                  className="
+                    rounded-2xl
+                    glass
+                    px-5 py-4
+                    flex items-center gap-3
+                    hover:bg-white/[0.03]
+                    transition
+                  "
+                >
+                  <div className="w-8 h-8 rounded-lg bg-primary/10 flex items-center justify-center shrink-0">
+                    <Icon className="w-4 h-4 text-primary" />
+                  </div>
+
+                  <p className="text-sm font-medium">
+                    {feature.title}
+                  </p>
+                </div>
+              );
+            })}
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+}
+
+function ReflectionBlock({ section }: { section: any }) {
+  return (
+    <section id="cs-reflection" className="scroll-mt-24">
+      <div className="rounded-3xl glass-strong p-6 md:p-8 overflow-hidden">
+        {/* Header */}
+        <div>
+          <p className="text-[10px] uppercase tracking-[0.3em] text-primary">
+            Reflection
+          </p>
+
+          <h2 className="mt-2 text-2xl md:text-3xl font-semibold">
+            {section.title}
+          </h2>
+
+          <p className="mt-2 text-sm text-muted-foreground">
+            {section.subtitle}
+          </p>
+        </div>
+
+        {/* 2 Columns */}
+        <div className="mt-10 grid md:grid-cols-2 gap-10">
+          {/* Key Learnings */}
+          <div>
+            <h3 className="text-xl font-semibold mb-5">
+              Key Learnings
+            </h3>
+
+            <div className="space-y-5">
+              {section.learnings?.map((item: string, i: number) => (
+                <p
+                  key={i}
+                  className="text-sm md:text-base text-muted-foreground leading-relaxed"
+                >
+                  {item}
+                </p>
+              ))}
+            </div>
+          </div>
+
+          {/* Future Improvements */}
+          <div>
+            <h3 className="text-xl font-semibold mb-5">
+              Future Improvements
+            </h3>
+
+            <div className="space-y-4">
+              {section.improvements?.map((item: string, i: number) => (
+                <div key={i} className="flex items-start gap-3">
+                  <span className="mt-2 w-1.5 h-1.5 rounded-full bg-primary shrink-0" />
+
+                  <p className="text-sm md:text-base text-muted-foreground leading-relaxed">
+                    {item}
+                  </p>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+
+        {/* Divider */}
+        <div className="mt-10 border-t border-white/10" />
+
+        {/* Quote */}
+        {section.quote && (
+          <div className="pt-8 text-center">
+            <p className="text-lg md:text-xl italic text-muted-foreground leading-relaxed max-w-3xl mx-auto">
+              “{section.quote}”
+            </p>
+          </div>
+        )}
       </div>
     </section>
   );
