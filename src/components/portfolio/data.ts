@@ -263,7 +263,7 @@ export const projects: Project[] = [
     category: "Mobile Application",
     accent: "from-[oklch(0.72_0.18_295)] to-[oklch(0.78_0.14_200)]",
     cover: aiRepTracker,
-    link: "https://www.figma.com/proto/1XNBoiSeJRtcMwAxZazapB/Filitastica?node-id=20-34&viewport=350%2C100%2C0.71&t=9vXJ2ePJE9Eim2Lf-1&scaling=min-zoom&content-scaling=fixed&starting-point-node-id=16%3A19&show-proto-sidebar=1&page-id=1%3A2",
+    link: "https://www.figma.com/proto/1XNBoiSeJRtcMwAxZazapB/Filitastica?node-id=20-34&p=f&viewport=181%2C50%2C0.14&t=8JzCLaYE7wQpggMx-1&scaling=min-zoom&content-scaling=fixed&starting-point-node-id=16%3A19&page-id=1%3A2",
     caseStudy: {
       intro:
         "Designing a AI-powered fitness experience that helps users train smarter with real-time form analysis and rep counting.",
@@ -579,6 +579,7 @@ export const projects: Project[] = [
     category: "Mobile Application",
     accent: "from-[oklch(0.78_0.14_200)] to-[oklch(0.85_0.16_140)]",
     cover: rentalLocker,
+    link: "https://www.figma.com/proto/dpTbyEtALbJblqsR4Z02kJ/Rental-Locker-System?node-id=19-19&p=f&viewport=691%2C1122%2C0.29&t=67hq4RZVuhCqhDjo-1&scaling=min-zoom&content-scaling=fixed&starting-point-node-id=19%3A9&page-id=11%3A6",
     caseStudy: {
       intro:
         "Designing a Secure, Contactless Locker Experience — where face recognition meets real-world hardware control.",
@@ -1217,6 +1218,7 @@ export const projects: Project[] = [
     category: "Mobile Application",
     accent: "from-[oklch(0.78_0.14_330)] to-[oklch(0.82_0.14_60)]",
     cover: productivity,
+    link: "https://www.figma.com/proto/Od9NUuJokk0CffHxM1mjGn/Productivity-App?page-id=0%3A1&node-id=93-1730&p=f&viewport=76%2C625%2C0.07&t=mmcdmJwaLWg3Gpb5-1&scaling=min-zoom&content-scaling=fixed&starting-point-node-id=93%3A1730",
     caseStudy: {
       intro:
         "An to-do list application built to simplify task management for everyday users. The app provides a clean, intuitive interface where users can create, edit, and organize their tasks while keeping track of what is done and what remains pending.",
