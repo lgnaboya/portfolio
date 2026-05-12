@@ -747,6 +747,7 @@ export const projects: Project[] = [
     category: "Mobile Application",
     accent: "from-[oklch(0.85_0.16_140)] to-[oklch(0.78_0.14_200)]",
     cover: dostScope,
+    link: "https://drive.google.com/file/d/1ZVhzqKZjlmZTX6VeQoyQLwqKyT4rqXoV/view?usp=sharing",
     caseStudy: {
       intro:
         "An interactive map-based platform designed to showcase and monitor science and technology interventions across selected communities in Leyte— including locations, progress, workplans, and fund use in a centralized database.",
@@ -906,6 +907,7 @@ export const projects: Project[] = [
     category: "Web Application",
     accent: "from-[oklch(0.82_0.14_60)] to-[oklch(0.72_0.18_295)]",
     cover: tesdaEcom,
+    link: "https://drive.google.com/file/d/1qh1bLROPhszXouNH7psYljVNDdY6y6DS/view?usp=sharing",
     caseStudy: {
       intro:
         "An E-Commerce bookstore designed to simplify how users browse, discover, and purchase books online.",
