@@ -422,6 +422,7 @@ export const projects: Project[] = [
     category: "Web & Mobile Application",
     accent: "from-[oklch(0.78_0.14_330)] to-[oklch(0.72_0.18_295)]",
     cover: noface,
+    link: "",
     caseStudy: {
       intro:
         "A chat platform designed to enable meaningful conversations through voice and text — without identity getting in the way. Masks identity to create a open and safe space.",
@@ -1062,6 +1063,7 @@ export const projects: Project[] = [
     category: "Web Application (Operations)",
     accent: "from-[oklch(0.72_0.18_260)] to-[oklch(0.78_0.14_200)]",
     cover: inventory,
+    link: "",
     caseStudy: {
       intro:
         "Replacing fragile spreadsheets with a more intuitive, user-friendly, and centralized inventory experience.",
