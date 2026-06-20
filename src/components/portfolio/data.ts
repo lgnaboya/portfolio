@@ -1,39 +1,39 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
 import aiRepTracker from "@/assets/projects/ai-rep-tracker.jpg";
+import architecture from "@/assets/projects/architecture.jpg";
+import centered from "@/assets/projects/centered.jpg";
+import creation from "@/assets/projects/creation.jpg";
 import dashboard from "@/assets/projects/dashboard.jpg";
 import dostScope from "@/assets/projects/dost-scope.jpg";
-import face from "@/assets/projects/face.jpg";
-import hardware from "@/assets/projects/hardware.jpg";
-import inventory from "@/assets/projects/inventory.jpg";
-import noface from "@/assets/projects/noface.jpg";
-import productivity from "@/assets/projects/productivity.jpg";
-import rentalLocker from "@/assets/projects/rental-locker.jpg";
-import tesdaEcom from "@/assets/projects/tesda-ecom.jpg";
-import trust from "@/assets/projects/trust.jpg";
-import movement from "@/assets/projects/movement.jpg";
-import repetitions from "@/assets/projects/repetitions.jpg";
-import split from "@/assets/projects/split.jpg";
-import sync from "@/assets/projects/sync.jpg";
-import minimal from "@/assets/projects/minimal.jpg";
-import flexible from "@/assets/projects/flexible.jpg";
-import starter from "@/assets/projects/starter.jpg";
-import privacy from "@/assets/projects/privacy.jpg";
 import entry from "@/assets/projects/entry.jpg";
-import interactive from "@/assets/projects/interactive.jpg";
+import face from "@/assets/projects/face.jpg";
+import flexible from "@/assets/projects/flexible.jpg";
+import hardware from "@/assets/projects/hardware.jpg";
 import information from "@/assets/projects/information.jpg";
-import storytelling from "@/assets/projects/storytelling.jpg";
-import shopping from "@/assets/projects/shopping.jpg";
-import structure from "@/assets/projects/structure.jpg";
-import purchase from "@/assets/projects/purchase.jpg";
-import responsive from "@/assets/projects/responsive.jpg";
-import centered from "@/assets/projects/centered.jpg";
-import architecture from "@/assets/projects/architecture.jpg";
 import interaction from "@/assets/projects/interaction.jpg";
-import technical from "@/assets/projects/technical.jpg";
+import interactive from "@/assets/projects/interactive.jpg";
 import task from "@/assets/projects/interface.jpg";
-import creation from "@/assets/projects/creation.jpg";
+import inventory from "@/assets/projects/inventory.jpg";
 import management from "@/assets/projects/management.jpg";
+import minimal from "@/assets/projects/minimal.jpg";
+import movement from "@/assets/projects/movement.jpg";
+import noface from "@/assets/projects/noface.jpg";
+import privacy from "@/assets/projects/privacy.jpg";
+import productivity from "@/assets/projects/productivity.jpg";
+import purchase from "@/assets/projects/purchase.jpg";
+import rentalLocker from "@/assets/projects/rental-locker.jpg";
+import repetitions from "@/assets/projects/repetitions.jpg";
+import responsive from "@/assets/projects/responsive.jpg";
+import shopping from "@/assets/projects/shopping.jpg";
+import split from "@/assets/projects/split.jpg";
+import starter from "@/assets/projects/starter.jpg";
+import storytelling from "@/assets/projects/storytelling.jpg";
+import structure from "@/assets/projects/structure.jpg";
+import sync from "@/assets/projects/sync.jpg";
+import technical from "@/assets/projects/technical.jpg";
+import tesdaEcom from "@/assets/projects/tesda-ecom.jpg";
 import tracking from "@/assets/projects/tracking.jpg";
+import trust from "@/assets/projects/trust.jpg";
 
 import {
   Accessibility,
@@ -50,7 +50,6 @@ import {
   CheckCircle2,
   ClockAlert,
   CloudOff,
-  Code2,
   Compass,
   Cpu,
   CreditCard,
@@ -60,8 +59,8 @@ import {
   FileChartLine,
   FileText,
   Filter,
-  Fingerprint,
   Frown,
+  GitBranch,
   Home,
   Images,
   Layers,
@@ -84,7 +83,6 @@ import {
   Package,
   Palette,
   Pencil,
-  PencilLine,
   PieChart,
   PlayCircle,
   Plus,
@@ -114,7 +112,7 @@ import {
 export type SectionId = "home" | "skills" | "projects" | "contact";
 
 export const sections: { id: SectionId; label: string; icon: typeof Home }[] = [
-  { id: "home", label: "Home", icon: Home },
+  { id: "home", label: "Profile", icon: Home },
   { id: "projects", label: "Projects", icon: Briefcase },
   { id: "skills", label: "Skills", icon: Sparkles },
   { id: "contact", label: "Contact", icon: Mail },
@@ -125,25 +123,74 @@ export const skillCategories = [
     id: "design",
     title: "Design & Prototyping",
     icon: Palette,
-    accent: "from-[oklch(0.72_0.18_295)] to-[oklch(0.78_0.14_330)]",
-    skills: ["Web & Mobile Design", "Wireframing & Prototyping", "Adobe Suite"],
+    accent: "from-[oklch(0.72_0.18_295)] to-[oklch(0.78_0.14_320)]",
+    skills: [
+      "Web & Mobile Design",
+      "Wireframing",
+      "High-Fidelity UI",
+      "Interactive Prototyping",
+      "Design Systems",
+    ],
     description:
-      "Crafting intuitive and visually engaging user experiences across web and mobile interfaces. Focused on usability, accessibility, and creative flow.",
+      "Designing intuitive digital experiences from low-fidelity concepts to polished interfaces while maintaining consistency, usability, and visual clarity.",
   },
+
   {
-    id: "dev",
-    title: "Development",
-    icon: Code2,
-    accent: "from-[oklch(0.78_0.14_200)] to-[oklch(0.72_0.18_260)]",
-    skills: ["HTML/CSS", "JS/TS", "React", "PHP/MySQL", "Java"],
+    id: "research",
+    title: "UX Research",
+    icon: Search,
+    accent: "from-[oklch(0.70_0.14_250)] to-[oklch(0.75_0.12_270)]",
+    skills: [
+      "User Interviews",
+      "Competitor Analysis",
+      "Personas",
+      "Journey Mapping",
+      "Usability Testing",
+    ],
     description:
-      "Building responsive and dynamic applications across web and mobile with clean, maintainable code and optimized performance.",
+      "Understanding user behaviors, pain points, and motivations through research methods that inform meaningful product decisions.",
+  },
+
+  {
+    id: "architecture",
+    title: "Information Architecture",
+    icon: GitBranch,
+    accent: "from-[oklch(0.68_0.12_240)] to-[oklch(0.72_0.10_260)]",
+    skills: [
+      "User Flows",
+      "Sitemaps",
+      "Navigation Design",
+      "Interaction Design",
+      "Content Structure",
+    ],
+    description:
+      "Structuring information and user journeys to create seamless experiences that reduce friction and improve task completion.",
+  },
+
+  {
+    id: "systems",
+    title: "Design Systems",
+    icon: LayoutGrid,
+    accent: "from-[oklch(0.74_0.16_290)] to-[oklch(0.78_0.12_310)]",
+    skills: [
+      "Components",
+      "Auto Layout",
+      "Variants",
+      "Accessibility",
+      "Developer Handoff",
+    ],
+    description:
+      "Building scalable and reusable component systems that ensure consistency, efficiency, and collaboration across products.",
   },
 ];
 
 export const skillIcons = { Figma, Layers };
 
-export type CaseStudySection = { title: string; body: string; bullets?: string[] };
+export type CaseStudySection = {
+  title: string;
+  body: string;
+  bullets?: string[];
+};
 
 export type ProblemFeature = {
   icon: any;
@@ -256,7 +303,11 @@ export const projects: Project[] = [
     tag: "Mobile • AI • Fitness",
     summary:
       "Tracks reps and enables real-time competitive workouts for more interactive and accurate training.",
-    features: ["Real-time pose detection", "Rep & form analysis", "Personalized stats dashboard"],
+    features: [
+      "Real-time pose detection",
+      "Rep & form analysis",
+      "Personalized stats dashboard",
+    ],
     stack: ["Figma", "Photoshop"],
     role: "Lead Designer",
     year: "2025",
@@ -308,12 +359,14 @@ export const projects: Project[] = [
           {
             icon: ScanLine,
             title: "Automatic Repetition Detection",
-            description: "Computer vision tracks user movements and accurately counts exercise repetitions in real time.",
+            description:
+              "Computer vision tracks user movements and accurately counts exercise repetitions in real time.",
           },
           {
             icon: Video,
             title: "Live Workout Competition",
-            description: "Users can join live video fitness sessions and compete with friends during workouts.",
+            description:
+              "Users can join live video fitness sessions and compete with friends during workouts.",
           },
           {
             icon: Users,
@@ -325,40 +378,61 @@ export const projects: Project[] = [
       },
       design: {
         title: "Designing for Movement & Motivation",
-        intro: "Key interaction and experience decisions that shaped the social fitness platform.",
+        intro:
+          "Key interaction and experience decisions that shaped the social fitness platform.",
         items: [
           {
             number: "01",
             title: "Designing Around Movement",
-            description: "Interfaces were designed to stay glanceable during workouts using large typography, minimal text, and strong visual hierarchy to reduce distraction.",
+            description:
+              "Interfaces were designed to stay glanceable during workouts using large typography, minimal text, and strong visual hierarchy to reduce distraction.",
             image: movement,
           },
           {
             number: "02",
             title: "AI-Powered Rep Detection",
-            description: "The system concept uses computer vision to automatically detect and count exercise repetitions across multiple workout types in real time.",
+            description:
+              "The system concept uses computer vision to automatically detect and count exercise repetitions across multiple workout types in real time.",
             image: repetitions,
           },
           {
             number: "03",
             title: "Split-Screen Social Workouts",
-            description: "A balanced split-screen layout allows users to equally view themselves and workout partners during live competitive sessions.",
+            description:
+              "A balanced split-screen layout allows users to equally view themselves and workout partners during live competitive sessions.",
             image: split,
           },
           {
             number: "04",
             title: "Real-Time Competitive Sync",
-            description: "Rep counting and workout progress synchronize instantly across devices to ensure fairness during live fitness challenges",
+            description:
+              "Rep counting and workout progress synchronize instantly across devices to ensure fairness during live fitness challenges",
             image: sync,
           },
         ],
         footer: {
           title: "Workout Feedback & Engagement",
-          description: "Instant visual feedback and gamified systems help maintain motivation without interrupting workout flow.",
+          description:
+            "Instant visual feedback and gamified systems help maintain motivation without interrupting workout flow.",
           features: [
-            { icon: Trophy, title: "Competitive Challenges", description: "Leaderboards, achievements, and rewards encourage long-term engagement." },
-            { icon: CheckCircle2, title: "Rep Validation", description: "Color-coded indicators confirm valid or invalid repetitions in real time." },
-            { icon: MonitorSmartphone, title: "Minimal Workout UI", description: "Large counters and simplified layouts keep focus on exercise performance." },
+            {
+              icon: Trophy,
+              title: "Competitive Challenges",
+              description:
+                "Leaderboards, achievements, and rewards encourage long-term engagement.",
+            },
+            {
+              icon: CheckCircle2,
+              title: "Rep Validation",
+              description:
+                "Color-coded indicators confirm valid or invalid repetitions in real time.",
+            },
+            {
+              icon: MonitorSmartphone,
+              title: "Minimal Workout UI",
+              description:
+                "Large counters and simplified layouts keep focus on exercise performance.",
+            },
           ],
         },
       },
@@ -367,45 +441,46 @@ export const projects: Project[] = [
         body: "The concept explored how AI-powered tracking and social interaction could improve workout accuracy, motivation, and overall engagement.",
 
         userValue: [
-        "Reduced the need for manual rep counting during workouts",
-        "Encouraged workout consistency through competitive social experiences",
-        "Provided instant feedback to help users maintain proper exercise form",
-      ],
+          "Reduced the need for manual rep counting during workouts",
+          "Encouraged workout consistency through competitive social experiences",
+          "Provided instant feedback to help users maintain proper exercise form",
+        ],
 
         technicalOutcome: [
-        "Designed a scalable real-time workout tracking experience",
-        "Created synchronized multi-user workout interactions",
-        "Developed a mobile-first interface optimized for active movement",
-      ],
+          "Designed a scalable real-time workout tracking experience",
+          "Created synchronized multi-user workout interactions",
+          "Developed a mobile-first interface optimized for active movement",
+        ],
 
         features: [
-        { icon: ScanLine, title: "Pose Detection" },
-        { icon: Repeat, title: "Automatic Rep Counting" },
-        { icon: Video, title: "Live Video Workouts" },
-        { icon: Activity, title: "Form Analysis" },
-        { icon: Trophy, title: "Competitive Challenges" },
-        { icon: BarChart3, title: "Performance Leaderboards" },
-      ],
-    },
+          { icon: ScanLine, title: "Pose Detection" },
+          { icon: Repeat, title: "Automatic Rep Counting" },
+          { icon: Video, title: "Live Video Workouts" },
+          { icon: Activity, title: "Form Analysis" },
+          { icon: Trophy, title: "Competitive Challenges" },
+          { icon: BarChart3, title: "Performance Leaderboards" },
+        ],
+      },
       reflection: {
         title: "What I Learned & Future Opportunities",
-        subtitle: "Designing the experience revealed how fitness products must balance technology, usability, and motivation.",
+        subtitle:
+          "Designing the experience revealed how fitness products must balance technology, usability, and motivation.",
 
         learnings: [
-        "I learned that fitness interfaces should never compete with the workout itself. Clear layouts, large visual elements, and glanceable feedback were more effective than feature-heavy screens.",
+          "I learned that fitness interfaces should never compete with the workout itself. Clear layouts, large visual elements, and glanceable feedback were more effective than feature-heavy screens.",
 
-        "The project also reinforced how social interaction can transform habit-building. Real-time competition and shared progress created a stronger sense of motivation than isolated tracking alone."
-      ],
+          "The project also reinforced how social interaction can transform habit-building. Real-time competition and shared progress created a stronger sense of motivation than isolated tracking alone.",
+        ],
 
         improvements: [
-        "Personalized AI workout recommendations",
-        "Expanded exercise recognition across more workout types",
-        "Voice-guided workout assistance",
-        "Advanced progress analytics and coaching insights",
-      ],
+          "Personalized AI workout recommendations",
+          "Expanded exercise recognition across more workout types",
+          "Voice-guided workout assistance",
+          "Advanced progress analytics and coaching insights",
+        ],
 
         quote:
-        "Fitness technology works best when it supports movement naturally instead of distracting from it."
+          "Fitness technology works best when it supports movement naturally instead of distracting from it.",
       },
     },
   },
@@ -467,12 +542,14 @@ export const projects: Project[] = [
           {
             icon: ShieldOff,
             title: "Privacy by Default",
-            description: "No persistent identities. Conversations begin without social pressure or personal exposure.",
+            description:
+              "No persistent identities. Conversations begin without social pressure or personal exposure.",
           },
           {
             icon: MessageCircle,
             title: "Meaningful Over Mass",
-            description: "Focused on smaller, more intimate interactions instead of overwhelming public chat rooms and endless noise.",
+            description:
+              "Focused on smaller, more intimate interactions instead of overwhelming public chat rooms and endless noise.",
           },
           {
             icon: Lightbulb,
@@ -484,40 +561,61 @@ export const projects: Project[] = [
       },
       design: {
         title: "Designing for Anonymous Connection",
-        intro: "Key interaction decisions focused on making conversations feel safe, natural, and accessible without relying on identity.",
+        intro:
+          "Key interaction decisions focused on making conversations feel safe, natural, and accessible without relying on identity.",
         items: [
           {
             number: "01",
             title: "Minimal Anonymous Chat Interface",
-            description: "Messages appear in a clean, readable stream with subtle visual distinction between participants -just enough to follow the thread, nothing more.",
+            description:
+              "Messages appear in a clean, readable stream with subtle visual distinction between participants -just enough to follow the thread, nothing more.",
             image: minimal,
           },
           {
             number: "02",
             title: "Flexible Voice & Text Communication",
-            description: "Users can seamlessly switch between text and voice messages, giving them control over how they communicate in different situations.",
+            description:
+              "Users can seamlessly switch between text and voice messages, giving them control over how they communicate in different situations.",
             image: flexible,
           },
           {
             number: "03",
             title: "Guided Conversation Starters",
-            description: "Curated prompts and topic suggestions help users overcome awkward silence and encourage more meaningful discussions.",
+            description:
+              "Curated prompts and topic suggestions help users overcome awkward silence and encourage more meaningful discussions.",
             image: starter,
           },
           {
             number: "04",
             title: "Privacy & Accessibility Controls",
-            description: "Clear session settings, accessibility options, and keyboard-friendly navigation ensure users feel both safe and included.",
+            description:
+              "Clear session settings, accessibility options, and keyboard-friendly navigation ensure users feel both safe and included.",
             image: privacy,
           },
         ],
         footer: {
           title: "Trust Through Simplicity",
-          description: "The interface avoids unnecessary complexity so users can focus on authentic interaction instead of managing identity.",
+          description:
+            "The interface avoids unnecessary complexity so users can focus on authentic interaction instead of managing identity.",
           features: [
-            { icon: MessageSquare, title: "Anonymous Messaging", description: "Display names help users recognize conversations without revealing personal information." },
-            { icon: Mic, title: "Message Interaction", description: "Messages with seamless switching between text and audio." },
-            { icon: Shield, title: "Session Control", description: "Accessibility settings, and privacy controls remain visible and easy to access." },
+            {
+              icon: MessageSquare,
+              title: "Anonymous Messaging",
+              description:
+                "Display names help users recognize conversations without revealing personal information.",
+            },
+            {
+              icon: Mic,
+              title: "Message Interaction",
+              description:
+                "Messages with seamless switching between text and audio.",
+            },
+            {
+              icon: Shield,
+              title: "Session Control",
+              description:
+                "Accessibility settings, and privacy controls remain visible and easy to access.",
+            },
           ],
         },
       },
@@ -526,44 +624,45 @@ export const projects: Project[] = [
         body: "The project explored how privacy-first interaction design could encourage more authentic communication and reduce the pressure commonly found in social platforms.",
 
         userValue: [
-        "Created a safer environment for open and honest conversations",
-        "Reduced social pressure by minimizing identity-driven interaction",
-        "Encouraged meaningful discussions through smaller and more intentional conversations",
-      ],
+          "Created a safer environment for open and honest conversations",
+          "Reduced social pressure by minimizing identity-driven interaction",
+          "Encouraged meaningful discussions through smaller and more intentional conversations",
+        ],
 
         technicalOutcome: [
-        "Designed a responsive real-time messaging experience across web and mobile",
-        "Integrated voice and text communication into a unified interaction flow",
-        "Built a scalable frontend architecture supporting future social and moderation features",
-      ],
+          "Designed a responsive real-time messaging experience across web and mobile",
+          "Integrated voice and text communication into a unified interaction flow",
+          "Built a scalable frontend architecture supporting future social and moderation features",
+        ],
 
         features: [
-        { icon: MessageSquare, title: "Real-Time Messaging" },
-        { icon: Mic, title: "Voice Communication" },
-        { icon: Shield, title: "Privacy Controls" },
-        { icon: Sparkles, title: "Conversation Starters" },
-        { icon: Users, title: "One-on-One Conversations" },
-        { icon: Accessibility, title: "Accessible Interface" },
-      ],
-    },
+          { icon: MessageSquare, title: "Real-Time Messaging" },
+          { icon: Mic, title: "Voice Communication" },
+          { icon: Shield, title: "Privacy Controls" },
+          { icon: Sparkles, title: "Conversation Starters" },
+          { icon: Users, title: "One-on-One Conversations" },
+          { icon: Accessibility, title: "Accessible Interface" },
+        ],
+      },
       reflection: {
         title: "What I Learned & Future Possibilities",
-        subtitle: "Designing NoFace revealed how removing barriers can create more honest and meaningful interaction.",
+        subtitle:
+          "Designing NoFace revealed how removing barriers can create more honest and meaningful interaction.",
 
         learnings: [
-        "NoFace reinforced that strong digital experiences are not always created by adding features. Sometimes the most impactful design decisions come from removing pressure, distraction, and unnecessary identity signals.",
+          "NoFace reinforced that strong digital experiences are not always created by adding features. Sometimes the most impactful design decisions come from removing pressure, distraction, and unnecessary identity signals.",
 
-        "I also learned that privacy-first design and accessibility are deeply connected. When identity becomes less important, interface clarity becomes more important. Every interaction must communicate purpose clearly without relying on familiarity or social status."
-      ],
+          "I also learned that privacy-first design and accessibility are deeply connected. When identity becomes less important, interface clarity becomes more important. Every interaction must communicate purpose clearly without relying on familiarity or social status.",
+        ],
 
         improvements: [
-        "Community-curated conversation starter library",
-        "Enhanced moderation and safety reporting tools",
-        "Customizable accessibility preferences",
-      ],
+          "Community-curated conversation starter library",
+          "Enhanced moderation and safety reporting tools",
+          "Customizable accessibility preferences",
+        ],
 
         quote:
-        "Anonymity is not the absence of identity — it is the removal of barriers that prevent honest conversation."
+          "Anonymity is not the absence of identity — it is the removal of barriers that prevent honest conversation.",
       },
     },
   },
@@ -573,7 +672,11 @@ export const projects: Project[] = [
     tag: "Mobile • IoT • Hardware",
     summary:
       "Secure locker rental system with facial recognition and digital payments for seamless access and transactions.",
-    features: ["Face recognition unlock", "Companion mobile app", "Admin dashboard"],
+    features: [
+      "Face recognition unlock",
+      "Companion mobile app",
+      "Admin dashboard",
+    ],
     stack: ["Android (Java)", "Firebase", "FaceNet", "ESP32"],
     role: "End-to-End Designer & Developer",
     year: "2024",
@@ -601,7 +704,8 @@ export const projects: Project[] = [
           {
             icon: Frown,
             title: "Lack of Transparency",
-            description: "Users have no visibility into locker availability or rental status.",
+            description:
+              "Users have no visibility into locker availability or rental status.",
           },
           {
             icon: Wallet,
@@ -624,7 +728,8 @@ export const projects: Project[] = [
           {
             icon: ScanFace,
             title: "Zero Physical Dependency",
-            description: "No keys, no cards, no PINs. Authentication is entirely biometric — something you are, not something you carry.",
+            description:
+              "No keys, no cards, no PINs. Authentication is entirely biometric — something you are, not something you carry.",
           },
           {
             icon: Activity,
@@ -641,40 +746,58 @@ export const projects: Project[] = [
       },
       design: {
         title: "Thinking Behind the Interface",
-        intro: "Design decisions focused on reducing friction, improving trust, and bridging the gap between digital interactions and physical locker behavior.",
+        intro:
+          "Design decisions focused on reducing friction, improving trust, and bridging the gap between digital interactions and physical locker behavior.",
         items: [
           {
             number: "01",
             title: "Replacing Keys or PINs",
-            description: "Traditional authentication creates friction through forgotten credentials, shared PINs, and slow verification. This shifts access from “something users remember” to “something users are,” enabling faster and more secure locker access.",
+            description:
+              "Traditional authentication creates friction through forgotten credentials, shared PINs, and slow verification. This shifts access from “something users remember” to “something users are,” enabling faster and more secure locker access.",
             image: face,
           },
           {
             number: "02",
             title: "Designing around System State",
-            description: "Instead of static pages, the interface adapts based on real-time locker states (Available, Occupied, and Active). This allows users to immediately understand availability, reduce unnecessary actions, and make faster decisions.",
+            description:
+              "Instead of static pages, the interface adapts based on real-time locker states (Available, Occupied, and Active). This allows users to immediately understand availability, reduce unnecessary actions, and make faster decisions.",
             image: dashboard,
           },
           {
             number: "03",
             title: "Hardware-Aware UX",
-            description: "The system communicates directly with microcontrollers, modules, and sensors. The interface was designed to reflect real-world hardware behavior through loading states, confirmation prompts, and recovery feedback.",
+            description:
+              "The system communicates directly with microcontrollers, modules, and sensors. The interface was designed to reflect real-world hardware behavior through loading states, confirmation prompts, and recovery feedback.",
             image: hardware,
           },
           {
             number: "04",
             title: "Trust Through Transparency",
-            description: "The platform involves payments and locker access, every interaction was designed with visible confirmation and clear feedback. This transparency builds confidence and reduces uncertainty in system interactions.",
+            description:
+              "The platform involves payments and locker access, every interaction was designed with visible confirmation and clear feedback. This transparency builds confidence and reduces uncertainty in system interactions.",
             image: trust,
           },
         ],
         footer: {
           title: "Feedback & System Status",
-          description: "Every interaction includes immediate system feedback to reduce uncertainty and reinforce user trust.",
+          description:
+            "Every interaction includes immediate system feedback to reduce uncertainty and reinforce user trust.",
           features: [
-            { icon: WalletMinimal, title: "Payment", description: "Confirmation + Transaction summary" },
-            { icon: LockOpen, title: "Locker Unlock", description: "LED indicator + push notification" },
-            { icon: TriangleAlert, title: "Errors", description: "Clear actionable alerts" },
+            {
+              icon: WalletMinimal,
+              title: "Payment",
+              description: "Confirmation + Transaction summary",
+            },
+            {
+              icon: LockOpen,
+              title: "Locker Unlock",
+              description: "LED indicator + push notification",
+            },
+            {
+              icon: TriangleAlert,
+              title: "Errors",
+              description: "Clear actionable alerts",
+            },
           ],
         },
       },
@@ -692,46 +815,47 @@ export const projects: Project[] = [
         body: "The system improves locker accessibility, reduces operational friction, and creates a more seamless rental experience through realtime and biometric authentication.",
 
         userValue: [
-        "Removed dependency on physical keys and PIN-based authentication",
-        "Reduced interaction time through fast biometric access",
-        "Provided realtime visibility into locker availability and status",
-        "Improved user confidence with clear transaction and rental tracking",
-      ],
+          "Removed dependency on physical keys and PIN-based authentication",
+          "Reduced interaction time through fast biometric access",
+          "Provided realtime visibility into locker availability and status",
+          "Improved user confidence with clear transaction and rental tracking",
+        ],
 
         technicalOutcome: [
-        "Reduced operational overhead by eliminating manual key management",
-        "Integrated digital payments to minimize cash handling processes",
-        "Improved system efficiency through realtime locker synchronization",
-        "Enabled scalable infrastructure for deployment across multiple locations",
-      ],
+          "Reduced operational overhead by eliminating manual key management",
+          "Integrated digital payments to minimize cash handling processes",
+          "Improved system efficiency through realtime locker synchronization",
+          "Enabled scalable infrastructure for deployment across multiple locations",
+        ],
 
         features: [
-        { icon: ScanFace, title: "Face Authentication" },
-        { icon: LockKeyhole, title: "Smart Locker Access" },
-        { icon: CreditCard, title: "Digital Payments" },
-        { icon: BellRing, title: "Realtime Notifications" },
-        { icon: Activity, title: "Live Locker Status" },
-        { icon: ShieldCheck, title: "Secure Access Control" },
-      ],
-    },
+          { icon: ScanFace, title: "Face Authentication" },
+          { icon: LockKeyhole, title: "Smart Locker Access" },
+          { icon: CreditCard, title: "Digital Payments" },
+          { icon: BellRing, title: "Realtime Notifications" },
+          { icon: Activity, title: "Live Locker Status" },
+          { icon: ShieldCheck, title: "Secure Access Control" },
+        ],
+      },
       reflection: {
         title: "Beyond Interface Design",
-        subtitle: "Designing the system required balancing usability, security, and real-world hardware behavior within a connected physical environment.",
+        subtitle:
+          "Designing the system required balancing usability, security, and real-world hardware behavior within a connected physical environment.",
 
         learnings: [
-        "Working with physical hardware changed how I approached UX design. Every interaction had a real-world consequence — from relay activation to locker unlocking — which made feedback, timing, and system clarity far more critical.",
+          "Working with physical hardware changed how I approached UX design. Every interaction had a real-world consequence — from relay activation to locker unlocking — which made feedback, timing, and system clarity far more critical.",
 
-        "The project reinforced that good product design extends beyond interfaces. Designing for hardware constraints, realtime system states, and biometric authentication required thinking about the entire user experience as a connected ecosystem."
-      ],
+          "The project reinforced that good product design extends beyond interfaces. Designing for hardware constraints, realtime system states, and biometric authentication required thinking about the entire user experience as a connected ecosystem.",
+        ],
 
         improvements: [
-        "Advanced analytics for locker usage patterns",
-        "Offline fallback support during network interruptions",
-        "Expanded biometric authentication options",
-      ],
+          "Advanced analytics for locker usage patterns",
+          "Offline fallback support during network interruptions",
+          "Expanded biometric authentication options",
+        ],
 
         quote:
-        "Thoughtful design is not just about creating screens — it is about making complex systems feel seamless, reliable, and human."
+          "Thoughtful design is not just about creating screens — it is about making complex systems feel seamless, reliable, and human.",
       },
     },
   },
@@ -741,7 +865,11 @@ export const projects: Project[] = [
     tag: "Mobile • Project Monitoring",
     summary:
       "A map-based platform for viewing and tracking science and technology projects in Leyte.",
-    features: ["Project lifecycle tracking", "Role-based access", "Reporting dashboards"],
+    features: [
+      "Project lifecycle tracking",
+      "Role-based access",
+      "Reporting dashboards",
+    ],
     stack: ["HTML/CSS", "JavaScript", "Java"],
     role: "Designer & Developer",
     year: "2026",
@@ -793,12 +921,14 @@ export const projects: Project[] = [
           {
             icon: MapPinned,
             title: "Spatial Project Awareness",
-            description: "Interactive mapping gives users real-world geographic context for every science and technology intervention.",
+            description:
+              "Interactive mapping gives users real-world geographic context for every science and technology intervention.",
           },
           {
             icon: PlayCircle,
             title: "Guided Multimedia Storytelling",
-            description: "Images, audio narration, and progressive content reveal create a more engaging way to explore project information.",
+            description:
+              "Images, audio narration, and progressive content reveal create a more engaging way to explore project information.",
           },
           {
             icon: Database,
@@ -810,40 +940,59 @@ export const projects: Project[] = [
       },
       design: {
         title: "Thinking Behind the Experience",
-        intro: "Key interaction and interface decisions focused on reducing cognitive load while turning static project data into a guided exploration journey.",
+        intro:
+          "Key interaction and interface decisions focused on reducing cognitive load while turning static project data into a guided exploration journey.",
         items: [
           {
             number: "01",
             title: "Designing a Cinematic Entry Experience",
-            description: "A fullscreen start screen with system-style messaging creates anticipation and gives users a clear sense of purpose before entering the platform.",
+            description:
+              "A fullscreen start screen with system-style messaging creates anticipation and gives users a clear sense of purpose before entering the platform.",
             image: entry,
           },
           {
             number: "02",
             title: "Using Maps as Context, Not Decoration",
-            description: "The interactive Leaflet.js map grounds project information in real geographic locations, helping users connect data with physical communities.",
+            description:
+              "The interactive Leaflet.js map grounds project information in real geographic locations, helping users connect data with physical communities.",
             image: interactive,
           },
           {
             number: "03",
             title: "Progressive Disclosure for Complex Information",
-            description: "Instead of overwhelming users with data, the experience gradually reveals information through markers, panels, slideshows, and structured details.",
+            description:
+              "Instead of overwhelming users with data, the experience gradually reveals information through markers, panels, slideshows, and structured details.",
             image: information,
           },
           {
             number: "04",
             title: "Multi-Sensory Storytelling",
-            description: "Combining visuals, categorized content, animations, and audio narration creates a richer and more memorable exploration experience.",
+            description:
+              "Combining visuals, categorized content, animations, and audio narration creates a richer and more memorable exploration experience.",
             image: storytelling,
           },
         ],
         footer: {
           title: "Interaction & System Behaviors",
-          description: "The experience was designed to guide users naturally without relying on overwhelming instructions.",
+          description:
+            "The experience was designed to guide users naturally without relying on overwhelming instructions.",
           features: [
-            { icon: LocateFixed, title: "Geolocation Trigger", description: "Auto-starts experiences based on user proximity." },
-            { icon: MapPin, title: "Interactive Markers", description: "Clickable project locations reveal detailed content." },
-            { icon: AudioLines, title: "Audio Narration", description: "Per-location voice guidance for deeper engagement." },
+            {
+              icon: LocateFixed,
+              title: "Geolocation Trigger",
+              description: "Auto-starts experiences based on user proximity.",
+            },
+            {
+              icon: MapPin,
+              title: "Interactive Markers",
+              description:
+                "Clickable project locations reveal detailed content.",
+            },
+            {
+              icon: AudioLines,
+              title: "Audio Narration",
+              description: "Per-location voice guidance for deeper engagement.",
+            },
           ],
         },
       },
@@ -852,46 +1001,47 @@ export const projects: Project[] = [
         body: "The project demonstrates how public-sector information can become more accessible, engaging, and understandable through interactive storytelling and spatial interfaces.",
 
         userValue: [
-        "Made project information easier to explore and understand through interactive mapping",
-        "Improved engagement using combined visual and audio storytelling",
-        "Provided real-world geographic context that static reports cannot offer",
-      ],
+          "Made project information easier to explore and understand through interactive mapping",
+          "Improved engagement using combined visual and audio storytelling",
+          "Provided real-world geographic context that static reports cannot offer",
+        ],
 
         technicalOutcome: [
-        "Interactive map-based system built using HTML, CSS, JavaScript, and Leaflet.js",
-        "Flexible modular data structure supporting multiple content types",
-        "Scalable frontend architecture designed for future real-time integrations",
-      ],
+          "Interactive map-based system built using HTML, CSS, JavaScript, and Leaflet.js",
+          "Flexible modular data structure supporting multiple content types",
+          "Scalable frontend architecture designed for future real-time integrations",
+        ],
 
         features: [
-        { icon: MapPinned, title: "Interactive Mapping" },
-        { icon: AudioLines, title: "Audio Narration" },
-        { icon: Images, title: "Image Slideshows" },
-        { icon: Locate, title: "Geolocation Trigger" },
-        { icon: LayoutPanelLeft, title: "Split-Panel Layout" },
-        { icon: MonitorPlay, title: "Cinematic Entry Screen" },
-      ],
-    },
+          { icon: MapPinned, title: "Interactive Mapping" },
+          { icon: AudioLines, title: "Audio Narration" },
+          { icon: Images, title: "Image Slideshows" },
+          { icon: Locate, title: "Geolocation Trigger" },
+          { icon: LayoutPanelLeft, title: "Split-Panel Layout" },
+          { icon: MonitorPlay, title: "Cinematic Entry Screen" },
+        ],
+      },
       reflection: {
         title: "What I learned",
-        subtitle: "Building the platform reinforced how interaction design can transform complex information into meaningful experiences.",
+        subtitle:
+          "Building the platform reinforced how interaction design can transform complex information into meaningful experiences.",
 
         learnings: [
-        "This project taught me that government and operational data does not need to feel static or overwhelming. Through thoughtful interaction design and storytelling, even technical information can become engaging and approachable.",
+          "This project taught me that government and operational data does not need to feel static or overwhelming. Through thoughtful interaction design and storytelling, even technical information can become engaging and approachable.",
 
-        "I also learned the importance of pacing and progressive disclosure. By revealing information gradually instead of all at once, the experience felt more guided, focused, and easier to understand.",
-      ],
+          "I also learned the importance of pacing and progressive disclosure. By revealing information gradually instead of all at once, the experience felt more guided, focused, and easier to understand.",
+        ],
 
         improvements: [
-        "Search and filtering by project type or location",
-        "Mobile-first optimization for field usage",
-        "Offline mode for low-connectivity areas",
-        "Analytics dashboard for engagement tracking",
-        "Real-time project data synchronization",
-      ],
+          "Search and filtering by project type or location",
+          "Mobile-first optimization for field usage",
+          "Offline mode for low-connectivity areas",
+          "Analytics dashboard for engagement tracking",
+          "Real-time project data synchronization",
+        ],
 
         quote:
-        "Good interaction design does not just present information — it guides people through understanding it."
+          "Good interaction design does not just present information — it guides people through understanding it.",
       },
     },
   },
@@ -901,7 +1051,11 @@ export const projects: Project[] = [
     tag: "Web • E-commerce",
     summary:
       "A responsive e-commerce platform that simplifies book discovery and purchasing through intuitive navigation.",
-    features: ["Product catalog & cart", "Vendor onboarding", "Secure checkout"],
+    features: [
+      "Product catalog & cart",
+      "Vendor onboarding",
+      "Secure checkout",
+    ],
     stack: ["HTML/CSS", "JavaScript"],
     role: "Designer & Developer",
     year: "2024",
@@ -923,12 +1077,14 @@ export const projects: Project[] = [
           {
             icon: Compass,
             title: "Hard to Navigate",
-            description: "Large catalogs lack clear structure, making it difficult to find books.",
+            description:
+              "Large catalogs lack clear structure, making it difficult to find books.",
           },
           {
             icon: Search,
             title: "Poor Discoverability",
-            description: "Without smart search and filtering, users give up early.",
+            description:
+              "Without smart search and filtering, users give up early.",
           },
           {
             icon: ShoppingCart,
@@ -950,12 +1106,14 @@ export const projects: Project[] = [
           {
             icon: Compass,
             title: "Exploration-First Browsing",
-            description: "Clear categories, curated layouts, and visual browsing help users discover books even when they do not know exactly what they want.",
+            description:
+              "Clear categories, curated layouts, and visual browsing help users discover books even when they do not know exactly what they want.",
           },
           {
             icon: Search,
             title: "Fast Intent-Based Search",
-            description: "Prominent search and streamlined navigation help users quickly find books, authors, and product details with minimal friction.",
+            description:
+              "Prominent search and streamlined navigation help users quickly find books, authors, and product details with minimal friction.",
           },
           {
             icon: ShoppingCart,
@@ -967,40 +1125,58 @@ export const projects: Project[] = [
       },
       design: {
         title: "Thinking Behind the Interface",
-        intro: "Key design decisions focused on simplifying navigation, improving discoverability, and making online book shopping feel approachable and intuitive.",
+        intro:
+          "Key design decisions focused on simplifying navigation, improving discoverability, and making online book shopping feel approachable and intuitive.",
         items: [
           {
             number: "01",
             title: "Designing for Different Shopping Behaviors",
-            description: "The interface supports both exploratory browsing and direct purchasing, allowing users to either discover visually or search with intent.",
+            description:
+              "The interface supports both exploratory browsing and direct purchasing, allowing users to either discover visually or search with intent.",
             image: shopping,
           },
           {
             number: "02",
             title: "Clear Navigation & Information Hierarchy",
-            description: "The platform was structured around core user actions such as browsing, searching, viewing details, and purchasing to reduce confusion and improve flow.",
+            description:
+              "The platform was structured around core user actions such as browsing, searching, viewing details, and purchasing to reduce confusion and improve flow.",
             image: structure,
           },
           {
             number: "03",
             title: "Simplifying Purchase Decisions",
-            description: "Product pages prioritize essential information like ratings, pricing, stock availability, and purchase actions to reduce hesitation during checkout.",
+            description:
+              "Product pages prioritize essential information like ratings, pricing, stock availability, and purchase actions to reduce hesitation during checkout.",
             image: purchase,
           },
           {
             number: "04",
             title: "Responsive & Consistent Experience",
-            description: "Reusable layouts, responsive grids, and consistent interaction patterns create a seamless experience across desktop, tablet, and mobile devices.",
+            description:
+              "Reusable layouts, responsive grids, and consistent interaction patterns create a seamless experience across desktop, tablet, and mobile devices.",
             image: responsive,
           },
         ],
         footer: {
           title: "Core Experience Features",
-          description: "Every interaction was designed to feel lightweight, responsive, and easy to understand.",
+          description:
+            "Every interaction was designed to feel lightweight, responsive, and easy to understand.",
           features: [
-            { icon: Search, title: "Search Functionality", description: "Fast access to books, authors, and categories." },
-            { icon: ShoppingCart, title: "Cart & Checkout", description: "Streamlined purchasing with minimal friction." },
-            { icon: LayoutGrid, title: "Responsive Layout", description: "Optimized browsing across all screen sizes." },
+            {
+              icon: Search,
+              title: "Search Functionality",
+              description: "Fast access to books, authors, and categories.",
+            },
+            {
+              icon: ShoppingCart,
+              title: "Cart & Checkout",
+              description: "Streamlined purchasing with minimal friction.",
+            },
+            {
+              icon: LayoutGrid,
+              title: "Responsive Layout",
+              description: "Optimized browsing across all screen sizes.",
+            },
           ],
         },
       },
@@ -1009,44 +1185,45 @@ export const projects: Project[] = [
         body: "The final product demonstrates how thoughtful UX and clean interface structure can simplify online shopping and improve product discoverability.",
 
         userValue: [
-        "Made browsing large book catalogs feel more organized and approachable",
-        "Reduced friction between discovery, product viewing, and purchasing",
-        "Supported both exploratory browsing and direct search behaviors",
-      ],
+          "Made browsing large book catalogs feel more organized and approachable",
+          "Reduced friction between discovery, product viewing, and purchasing",
+          "Supported both exploratory browsing and direct search behaviors",
+        ],
 
         technicalOutcome: [
-        "Responsive e-commerce interface built using HTML, CSS, and JavaScript",
-        "Reusable layout patterns for scalable product and category pages",
-        "Semantic and mobile-first frontend structure for accessibility and responsiveness",
-      ],
+          "Responsive e-commerce interface built using HTML, CSS, and JavaScript",
+          "Reusable layout patterns for scalable product and category pages",
+          "Semantic and mobile-first frontend structure for accessibility and responsiveness",
+        ],
 
         features: [
-        { icon: LayoutGrid, title: "Categorized Listings" },
-        { icon: Search, title: "Book Search" },
-        { icon: ShoppingCart, title: "Add to Cart" },
-        { icon: CreditCard, title: "Checkout Flow" },
-        { icon: Smartphone, title: "Responsive Design" },
-        { icon: Star, title: "Ratings & Reviews" },
-      ],
-    },
+          { icon: LayoutGrid, title: "Categorized Listings" },
+          { icon: Search, title: "Book Search" },
+          { icon: ShoppingCart, title: "Add to Cart" },
+          { icon: CreditCard, title: "Checkout Flow" },
+          { icon: Smartphone, title: "Responsive Design" },
+          { icon: Star, title: "Ratings & Reviews" },
+        ],
+      },
       reflection: {
         title: "What I learned",
-        subtitle: "Designing the bookstore experience reinforced how simplicity and structure improve usability in e-commerce products.",
+        subtitle:
+          "Designing the bookstore experience reinforced how simplicity and structure improve usability in e-commerce products.",
 
         learnings: [
-        "This project taught me how information architecture directly affects user confidence. Clear hierarchy, navigation, and layout patterns made large product catalogs feel easier to explore.",
+          "This project taught me how information architecture directly affects user confidence. Clear hierarchy, navigation, and layout patterns made large product catalogs feel easier to explore.",
 
-        "I also learned that good e-commerce experiences balance aesthetics with efficiency. Users want visually engaging interfaces, but they also expect speed, clarity, and minimal friction during purchasing.",
-      ],
+          "I also learned that good e-commerce experiences balance aesthetics with efficiency. Users want visually engaging interfaces, but they also expect speed, clarity, and minimal friction during purchasing.",
+        ],
 
         improvements: [
-         "Personalized book recommendations",
-         "Advanced filtering and sorting options",
-         "Usability testing for validating shopping flows",
-      ],
+          "Personalized book recommendations",
+          "Advanced filtering and sorting options",
+          "Usability testing for validating shopping flows",
+        ],
 
         quote:
-        "A good e-commerce experience doesn't just help users buy faster. It helps them decide with confidence."
+          "A good e-commerce experience doesn't just help users buy faster. It helps them decide with confidence.",
       },
     },
   },
@@ -1056,7 +1233,11 @@ export const projects: Project[] = [
     tag: "Web App • Operations",
     summary:
       "A system designed to centralize stock management and improve usability for operational workflows.",
-    features: ["Stock & audit trails", "Barcode integration", "Analytics & alerts"],
+    features: [
+      "Stock & audit trails",
+      "Barcode integration",
+      "Analytics & alerts",
+    ],
     stack: ["JavaScript", "PHP", "MySQL", "XAMPP"],
     role: "Designer & Developer",
     year: "2023",
@@ -1108,12 +1289,14 @@ export const projects: Project[] = [
           {
             icon: Activity,
             title: "Real-Time Inventory Tracking",
-            description: "Giving users immediate visibility into product availability and inventory movement.",
+            description:
+              "Giving users immediate visibility into product availability and inventory movement.",
           },
           {
             icon: Database,
             title: "Centralized Inventory Management",
-            description: "All inventory records, transactions, and stock information are managed within a single accessible platform.",
+            description:
+              "All inventory records, transactions, and stock information are managed within a single accessible platform.",
           },
           {
             icon: BarChart3,
@@ -1125,40 +1308,58 @@ export const projects: Project[] = [
       },
       design: {
         title: "Designing for Operational Clarity",
-        intro: "The system was designed to simplify inventory workflows, reduce friction, and make technical operations feel more approachable for everyday users.",
+        intro:
+          "The system was designed to simplify inventory workflows, reduce friction, and make technical operations feel more approachable for everyday users.",
         items: [
           {
             number: "01",
             title: "User-Centered Thinking",
-            description: "The interface was designed to remain accessible for users with varying technical backgrounds by simplifying navigation, reducing cognitive load, and prioritizing clarity.",
+            description:
+              "The interface was designed to remain accessible for users with varying technical backgrounds by simplifying navigation, reducing cognitive load, and prioritizing clarity.",
             image: centered,
           },
           {
             number: "02",
             title: "Structured Information Architecture",
-            description: "Features were organized into clear sections with logical navigation flows so users could easily understand where they are and what actions are available.",
+            description:
+              "Features were organized into clear sections with logical navigation flows so users could easily understand where they are and what actions are available.",
             image: architecture,
           },
           {
             number: "03",
             title: "Consistent Interaction Design",
-            description: "Actions, controls, and feedback were designed to feel predictable and responsive, helping reduce user error while improving usability.",
+            description:
+              "Actions, controls, and feedback were designed to feel predictable and responsive, helping reduce user error while improving usability.",
             image: interaction,
           },
           {
             number: "04",
             title: "Balancing Technical Systems with UX",
-            description: "The project balanced backend functionality such as database management and deployment with usability-focused design decisions that kept workflows intuitive.",
+            description:
+              "The project balanced backend functionality such as database management and deployment with usability-focused design decisions that kept workflows intuitive.",
             image: technical,
           },
         ],
         footer: {
           title: "System Foundations",
-          description: "The platform combines operational functionality with structured workflows and reliable system architecture.",
+          description:
+            "The platform combines operational functionality with structured workflows and reliable system architecture.",
           features: [
-            { icon: Server, title: "Local Hosting", description: "Configured using XAMPP, Apache, and MySQL" },
-            { icon: Database, title: "Database Integration", description: "Connected PHP frontend with MySQL backend" },
-            { icon: Users, title: "Role-Based Access", description: "Different permissions for admins and staff" },
+            {
+              icon: Server,
+              title: "Local Hosting",
+              description: "Configured using XAMPP, Apache, and MySQL",
+            },
+            {
+              icon: Database,
+              title: "Database Integration",
+              description: "Connected PHP frontend with MySQL backend",
+            },
+            {
+              icon: Users,
+              title: "Role-Based Access",
+              description: "Different permissions for admins and staff",
+            },
           ],
         },
       },
@@ -1167,45 +1368,46 @@ export const projects: Project[] = [
         body: "The project improved operational efficiency by simplifying inventory workflows, centralizing data management, and making technical systems easier to use.",
 
         userValue: [
-        "Reduced manual tracking errors through centralized inventory records",
-        "Improved usability with clearer workflows and simplified navigation",
-        "Faster onboarding for users due to intuitive interface structure",
-      ],
+          "Reduced manual tracking errors through centralized inventory records",
+          "Improved usability with clearer workflows and simplified navigation",
+          "Faster onboarding for users due to intuitive interface structure",
+        ],
 
         technicalOutcome: [
-        "Fully functional inventory management system with CRUD operations",
-        "Structured and scalable PHP/MySQL architecture for future expansion",
-        "Reliable local deployment using XAMPP and database integration",
-      ],
+          "Fully functional inventory management system with CRUD operations",
+          "Structured and scalable PHP/MySQL architecture for future expansion",
+          "Reliable local deployment using XAMPP and database integration",
+        ],
 
         features: [
-        { icon: Package, title: "Inventory Tracking" },
-        { icon: Pencil, title: "CRUD Operations" },
-        { icon: Database, title: "Database Integration" },
-        { icon: Users, title: "User Roles" },
-        { icon: BarChart3, title: "Reports & Analytics" },
-        { icon: Monitor, title: "Local Hosting" },
-      ],
-    },
+          { icon: Package, title: "Inventory Tracking" },
+          { icon: Pencil, title: "CRUD Operations" },
+          { icon: Database, title: "Database Integration" },
+          { icon: Users, title: "User Roles" },
+          { icon: BarChart3, title: "Reports & Analytics" },
+          { icon: Monitor, title: "Local Hosting" },
+        ],
+      },
       reflection: {
         title: "What I learned and where it could go",
-        subtitle: "Designing the system reinforced how usability can improve even highly technical operational tools.",
+        subtitle:
+          "Designing the system reinforced how usability can improve even highly technical operational tools.",
 
         learnings: [
-        "This project reinforced the importance of simplifying technical systems for non-technical users. Clear structure and predictable workflows significantly improved usability.",
+          "This project reinforced the importance of simplifying technical systems for non-technical users. Clear structure and predictable workflows significantly improved usability.",
 
-        "I also learned that operational software succeeds not only through functionality, but through trust. Users need systems that feel reliable, understandable, and easy to navigate.",
-      ],
+          "I also learned that operational software succeeds not only through functionality, but through trust. Users need systems that feel reliable, understandable, and easy to navigate.",
+        ],
 
         improvements: [
-        "Barcode scanner integration for faster inventory updates",
-        "Real-time cloud synchronization across devices",
-        "Mobile-responsive interface for on-site inventory checks",
-        "Automated low-stock notification system",
-      ],
+          "Barcode scanner integration for faster inventory updates",
+          "Real-time cloud synchronization across devices",
+          "Mobile-responsive interface for on-site inventory checks",
+          "Automated low-stock notification system",
+        ],
 
         quote:
-        "Good operational software is not just about managing data. It is about making complex workflows feel simple and reliable."
+          "Good operational software is not just about managing data. It is about making complex workflows feel simple and reliable.",
       },
     },
   },
@@ -1256,22 +1458,25 @@ export const projects: Project[] = [
 
         goal: {
           title: "Design Question",
-          description: "What would a simple and effective task management system look like?",
+          description:
+            "What would a simple and effective task management system look like?",
         },
       },
-       strategy: {
+      strategy: {
         title: "A Focused Productivity Companion",
         body: "Instead of building another feature-heavy productivity platform, BusyBee was designed as a lightweight and reliable task companion focused on speed, clarity, and everyday usability.",
         features: [
           {
             icon: Sparkles,
             title: "Simplicity First",
-            description: "Every feature must earn its place. If it does not directly help users create, edit, or complete a task, it does not belong in BusyBee. This constraint drives clarity.",
+            description:
+              "Every feature must earn its place. If it does not directly help users create, edit, or complete a task, it does not belong in BusyBee. This constraint drives clarity.",
           },
           {
             icon: Zap,
             title: "Instant Task Capture",
-            description: "The barrier to adding a task must be as low as possible. A single tap to create, minimal typing, and smart defaults ensure users actually use the app. ",
+            description:
+              "The barrier to adding a task must be as low as possible. A single tap to create, minimal typing, and smart defaults ensure users actually use the app. ",
           },
           {
             icon: ChartNoAxesCombined,
@@ -1283,40 +1488,58 @@ export const projects: Project[] = [
       },
       design: {
         title: "How the Experience Was Crafted",
-        intro: "Every interaction was designed to reduce friction, maintain clarity, and make task management feel lightweight instead of overwhelming.",
+        intro:
+          "Every interaction was designed to reduce friction, maintain clarity, and make task management feel lightweight instead of overwhelming.",
         items: [
           {
             number: "01",
             title: "Clean Task List Interface",
-            description: "The main interface prioritizes clarity through spacing, hierarchy, and simple visual organization so users can focus on tasks without distraction.",
+            description:
+              "The main interface prioritizes clarity through spacing, hierarchy, and simple visual organization so users can focus on tasks without distraction.",
             image: task,
           },
           {
             number: "02",
             title: "Frictionless Task Creation",
-            description: "Adding a new tasks is a single-tap action, designed to be instant and lightweight. The goal is to get the thought captured before it is forgotten.",
+            description:
+              "Adding a new tasks is a single-tap action, designed to be instant and lightweight. The goal is to get the thought captured before it is forgotten.",
             image: creation,
           },
           {
             number: "03",
             title: "Task Editing & Management",
-            description: "Editing, completing, and deleting tasks follows a consistent interaction pattern that keeps users oriented while maintaining fast workflows.",
+            description:
+              "Editing, completing, and deleting tasks follows a consistent interaction pattern that keeps users oriented while maintaining fast workflows.",
             image: management,
           },
           {
             number: "04",
             title: "Progress Tracking",
-            description: "Visual summaries and completion indicators provide motivation by helping users instantly understand progress and remaining work.",
+            description:
+              "Visual summaries and completion indicators provide motivation by helping users instantly understand progress and remaining work.",
             image: tracking,
           },
         ],
         footer: {
           title: "Interaction & Feedback System",
-          description: "Subtle feedback and lightweight interactions help users feel in control while keeping the experience responsive and predictable.",
+          description:
+            "Subtle feedback and lightweight interactions help users feel in control while keeping the experience responsive and predictable.",
           features: [
-            { icon: Plus, title: "Quick Add", description: "Single-tap task creation flow" },
-            { icon: CheckCircle2, title: "Completion Feedback", description: "Visual confirmation for finished tasks" },
-            { icon: Pencil, title: "Inline Editing", description: "Edit tasks without losing context" },
+            {
+              icon: Plus,
+              title: "Quick Add",
+              description: "Single-tap task creation flow",
+            },
+            {
+              icon: CheckCircle2,
+              title: "Completion Feedback",
+              description: "Visual confirmation for finished tasks",
+            },
+            {
+              icon: Pencil,
+              title: "Inline Editing",
+              description: "Edit tasks without losing context",
+            },
           ],
         },
       },
@@ -1325,44 +1548,45 @@ export const projects: Project[] = [
         body: "Measured improvements in usability, workflow efficiency, and system reliability.",
 
         userValue: [
-        "Reduced mental load by providing a reliable external task memory",
-        "Encouraged consistent productivity through simple task completion",
-        "Lowered barrier to entry compared to complex productivity suites",
-      ],
+          "Reduced mental load by providing a reliable external task memory",
+          "Encouraged consistent productivity through simple task completion",
+          "Lowered barrier to entry compared to complex productivity suites",
+        ],
 
         technicalOutcome: [
-        "Fully functional CRUD system with local data persistence",
-        "Smooth, responsive UI built natively for Android",
-        "Scalable architecture supporting future feature expansion",
-      ],
+          "Fully functional CRUD system with local data persistence",
+          "Smooth, responsive UI built natively for Android",
+          "Scalable architecture supporting future feature expansion",
+        ],
 
         features: [
-        { icon: Plus, title: "Create Tasks" },
-        { icon: Pencil, title: "Edit Tasks" },
-        { icon: CheckCircle2, title: "Mark Complete" },
-        { icon: Trash2, title: "Delete Tasks" },
-        { icon: Filter, title: "Status Filtering" },
-        { icon: PieChart, title: "Progress Summary" },
-      ],
-    },
+          { icon: Plus, title: "Create Tasks" },
+          { icon: Pencil, title: "Edit Tasks" },
+          { icon: CheckCircle2, title: "Mark Complete" },
+          { icon: Trash2, title: "Delete Tasks" },
+          { icon: Filter, title: "Status Filtering" },
+          { icon: PieChart, title: "Progress Summary" },
+        ],
+      },
       reflection: {
         title: "What I learned and where it could go",
-        subtitle: "Building the product revealed how simplicity improves usability.",
+        subtitle:
+          "Building the product revealed how simplicity improves usability.",
 
         learnings: [
-        "Building BusyBee reinforced the power of constraint-based design. By limiting the feature set to what truly matters, the app became more usable, more focused, and easier to build correctly.",
+          "Building BusyBee reinforced the power of constraint-based design. By limiting the feature set to what truly matters, the app became more usable, more focused, and easier to build correctly.",
 
-        "I also learned that mobile productivity apps succeed not through complexity, but through speed. The faster a user can capture a task, the more likely they are to build a habit around the app."
-      ],
+          "I also learned that mobile productivity apps succeed not through complexity, but through speed. The faster a user can capture a task, the more likely they are to build a habit around the app.",
+        ],
 
         improvements: [
-        "Weekly productivity analytics dashboard",
-        "Cloud sync across multiple devices",
-        "Dark mode for low-light usage"
-      ],
+          "Weekly productivity analytics dashboard",
+          "Cloud sync across multiple devices",
+          "Dark mode for low-light usage",
+        ],
 
         quote:
-        "A simple to-do app does not just help users remember tasks. It helps them feel in control of their day."
+          "A simple to-do app does not just help users remember tasks. It helps them feel in control of their day.",
       },
     },
   },

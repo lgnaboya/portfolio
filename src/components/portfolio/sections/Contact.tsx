@@ -1,5 +1,12 @@
 import { motion } from "framer-motion";
-import { ClipboardPaste, Figma, Github, Handshake, Linkedin, Mail } from "lucide-react";
+import {
+  ClipboardPaste,
+  Figma,
+  Github,
+  Handshake,
+  Linkedin,
+  Mail,
+} from "lucide-react";
 import { useState } from "react";
 
 const links = [
@@ -9,7 +16,12 @@ const links = [
     value: "loudettgleacnaboya@gmail.com",
     href: "mailto:loudettgleacnaboya@gmail.com",
   },
-  { icon: Linkedin, label: "LinkedIn", value: "/in/loudette-glea-naboya", href: "#" },
+  {
+    icon: Linkedin,
+    label: "LinkedIn",
+    value: "/in/loudette-glea-naboya",
+    href: "#",
+  },
   { icon: Github, label: "GitHub", value: "@lgnaboya", href: "#" },
   { icon: Figma, label: "Figma", value: "@loudettenaboya", href: "#" },
 ];
@@ -37,7 +49,9 @@ export function Contact() {
           className="flex items-center justify-center gap-2 text-primary"
         >
           <Handshake className="w-4 h-4" />
-          <p className="text-xs uppercase tracking-[0.3em]">Let's build something</p>
+          <p className="text-xs uppercase tracking-[0.3em]">
+            Let's build something
+          </p>
         </motion.p>
         <motion.h2
           initial={{ opacity: 0, y: 20 }}
@@ -65,7 +79,9 @@ export function Contact() {
 
           {/* subtle feedback label */}
           {copied && (
-            <span className="absolute -bottom-6 text-xs text-primary right-0">✓ Email Copied</span>
+            <span className="absolute -bottom-6 text-xs text-green-600 right-0">
+              ✓ Email Copied
+            </span>
           )}
         </motion.button>
 

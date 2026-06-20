@@ -3,7 +3,12 @@ import { motion } from "framer-motion";
 import { ArrowRight, CircleDotDashed } from "lucide-react";
 import { useEffect, useRef, useState } from "react";
 
-const roles = ["UI/UX Designer", "Web Developer", "System Thinker", "Problem Solver"];
+const roles = [
+  "UI/UX Designer",
+  "User Advocate",
+  "Research-Driven",
+  "Experience Designer",
+];
 
 export function Hero({ onCTA }: { onCTA: () => void }) {
   const [idx, setIdx] = useState(0);
@@ -134,7 +139,17 @@ export function Hero({ onCTA }: { onCTA: () => void }) {
 
   return (
     <div
-      className="relative h-full w-full grid-bg flex items-center justify-center px-4 sm:px-6 md:px-20 overflow-hidden"
+      className=" relative
+    min-h-screen
+    md:h-full
+    w-full
+    grid-bg
+    flex
+    items-start
+    md:items-center
+    justify-center
+    px-4 sm:px-6 md:px-20
+    py-10 md:py-0"
       onMouseMove={handleMouseMove}
       onMouseUp={handleMouseUp}
       onMouseLeave={handleMouseUp}
@@ -143,16 +158,15 @@ export function Hero({ onCTA }: { onCTA: () => void }) {
       <motion.div
         animate={{ y: [0, -30, 0], x: [0, 20, 0] }}
         transition={{ duration: 9, repeat: Infinity }}
-        className="absolute top-[10%] right-[8%] w-80 h-80 rounded-full bg-primary/20 blur-3xl"
+        className="absolute top-[10%] right-[8%] w-80 h-80 rounded-full bg-primary/20 blur-[120px]"
       />
       <motion.div
         animate={{ y: [0, 25, 0], x: [0, -15, 0] }}
         transition={{ duration: 11, repeat: Infinity }}
-        className="absolute bottom-[5%] left-[8%] w-96 h-96 rounded-full bg-accent/20 blur-3xl"
+        className="absolute bottom-[5%] left-[8%] w-96 h-96 rounded-full bg-accent/20 blur-[120px]"
       />
 
-      <div className="relative w-full max-w-6xl grid md:grid-cols-[auto_1fr] gap-10 md:gap-14 items-center">
-        {/* ===== LANYARD PORTRAIT (MOBILE FIX ONLY) ===== */}
+      <div className="relative w-full max-w-6xl grid md:grid-cols-[auto_1fr] gap-8 md:gap-14 items-center py-10 md:py-0">
         <div className="flex justify-center md:justify-end animate-fade-in scale-90 sm:scale-100">
           <div
             className="relative pt-24 sm:pt-32"
@@ -183,12 +197,12 @@ export function Hero({ onCTA }: { onCTA: () => void }) {
                   cursor: isDragging ? "grabbing" : "grab",
                 }}
                 onMouseDown={handleMouseDown}
-                className="relative bg-gradient-card backdrop-blur-xl border-2 border-[var(--glass-border)] rounded-3xl p-6 sm:p-8 shadow-[var(--shadow-card)] w-[280px] sm:w-80"
+                className="relative bg-gradient-card backdrop-blur-xl border-2 border-[var(--glass-border)] rounded-3xl p-6 sm:p-8 shadow-[var(--shadow-card)] w-[240px] xs:w-[260px] sm:w-80"
               >
                 <div className="absolute top-0 left-0 right-0 h-3 bg-gradient-primary rounded-t-3xl" />
 
                 <div className="flex flex-col items-center gap-6 pt-4">
-                  <div className="w-full h-60 sm:h-72 rounded-xl overflow-hidden">
+                  <div className="w-full h-52 sm:h-72 rounded-xl overflow-hidden">
                     <img
                       src={portrait}
                       alt="Portrait of Loudette"
@@ -198,7 +212,7 @@ export function Hero({ onCTA }: { onCTA: () => void }) {
                   </div>
                 </div>
 
-                <h1 className="mt-5 text-lg sm:text-xl text-center font-semibold leading-[0.95]">
+                <h1 className="mt-5 text-md sm:text-xl text-center font-semibold leading-[0.95]">
                   Loudette Glea <span className="text-gradient">Naboya</span>
                 </h1>
               </div>
@@ -210,33 +224,45 @@ export function Hero({ onCTA }: { onCTA: () => void }) {
         <div className="text-center md:text-left">
           <div className="mt-2 sm:mt-24 inline-flex items-center gap-2 px-3 py-1 rounded-full glass text-xs uppercase tracking-[0.2em] text-muted-foreground">
             <CircleDotDashed className="w-3.5 h-3.5 text-primary" />
-            Taking on curated projects
+            Open to UI/UX Design Opportunities
           </div>
 
-          <p className="mt-8 text-lg md:text-2xl text-muted-foreground">
-            I'm a <span className="text-foreground font-medium">{text}</span>
+          <p className="mt-8 text-xl md:text-3xl text-muted-foreground">
+            I'm a <span className="text-foreground font-semibold">{text}</span>
             <span className="inline-block w-[2px] h-6 bg-primary ml-1 animate-pulse" />
           </p>
 
-          <p className="mt-4 max-w-xl text-sm md:text-md text-justify text-muted-foreground">
-            I design and build structured digital products.
-            <br />
-            Clear. Scalable. Intentional.
-            <br />
-            <br />
-            Driven by curiosity and continuous learning, I thrive in dynamic environments where I
-            explore new tools, solve complex problems, and transform ideas into functional solutions
-            that deliver real-world value.
+          <p className="mt-4 max-w-xl text-base md:text-lg text-muted-foreground leading-relaxed text-justify">
+            I design intuitive digital experiences that balance user needs,
+            business goals, and technical feasibility. Through research and
+            intentional design, I transform complex challenges into clear,
+            meaningful solutions that create value for both users and
+            businesses.
           </p>
 
-          <div className="mt-8 sm:mt-16 flex gap-3 justify-center md:justify-start">
+          <div className="mt-5 flex flex-wrap gap-2 justify-center md:justify-start">
+            <span className="glass px-3 py-1 rounded-full text-xs">
+              Web & Mobile
+            </span>
+            <span className="glass px-3 py-1 rounded-full text-xs">
+              User-Centered
+            </span>
+            <span className="glass px-3 py-1 rounded-full text-xs">
+              End-to-End Design
+            </span>
+          </div>
+
+          <div className="mt-8 sm:mt-16 flex flex-col sm:flex-row gap-3 justify-center md:justify-start w-full max-w-md">
+            {/* Primary CTA */}
             <button
               onClick={onCTA}
-              className="group px-6 py-3 rounded-md bg-primary text-primary-foreground"
+              className="group inline-flex items-center justify-center px-6 py-3 rounded-md bg-gradient-to-r from-primary to-primary/80 text-primary-foreground font-medium shadow-lg shadow-primary/25 transition-all duration-300 hover:scale-[1.03] hover:shadow-xl hover:shadow-primary/40"
             >
-              View Projects <ArrowRight className="inline w-4 h-4 ml-1" />
+              View Projects
+              <ArrowRight className="inline w-4 h-4 ml-2 transition-transform group-hover:translate-x-1" />
             </button>
 
+            {/* Secondary CTA */}
             <div className="relative flex flex-col items-end">
               <a
                 href="#"
@@ -246,13 +272,15 @@ export function Hero({ onCTA }: { onCTA: () => void }) {
                   setCopied(true);
                   setTimeout(() => setCopied(false), 2000);
                 }}
-                className="inline-flex items-center justify-center border border-gray-500 text-gray-500 rounded-md px-6 py-3 text-sm font-medium transition-all duration-300 hover:bg-gray-300/10"
+                className="w-full inline-flex items-center justify-center rounded-md border border-primary/30 bg-white/5 backdrop-blur-md px-6 py-3 text-sm font-medium text-foreground transition-all duration-300 hover:border-primary hover:bg-primary/10 hover:text-primary"
               >
-                Get In Touch
+                Contact Me
               </a>
 
               {copied && (
-                <span className="absolute -bottom-5 text-xs text-green-700">✓ Email Copied</span>
+                <span className="absolute -bottom-5 text-xs text-green-600">
+                  ✓ Email Copied
+                </span>
               )}
             </div>
           </div>

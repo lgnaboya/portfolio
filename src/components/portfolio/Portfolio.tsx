@@ -66,13 +66,17 @@ export function Portfolio() {
   };
 
   const variants = {
-    enter: (dir: number) => ({ opacity: 0, x: dir > 0 ? 80 : -80, scale: 0.98 }),
+    enter: (dir: number) => ({
+      opacity: 0,
+      x: dir > 0 ? 80 : -80,
+      scale: 0.98,
+    }),
     center: { opacity: 1, x: 0, scale: 1 },
     exit: (dir: number) => ({ opacity: 0, x: dir > 0 ? -80 : 80, scale: 0.98 }),
   };
 
   return (
-    <div className="relative h-screen w-screen overflow-hidden text-foreground">
+    <div className="relative min-h-screen w-screen md:h-screen md:overflow-hidden text-foreground">
       <CodeBackground />
       {/* Top brand bar */}
       <div className="absolute top-5 left-1/2 -translate-x-1/2 md:left-6 md:translate-x-0 z-40 flex items-center gap-2 px-4 py-2 rounded-full glass">
@@ -81,7 +85,7 @@ export function Portfolio() {
       </div>
 
       {/* Section indicator */}
-      <div className="absolute top-5 right-6 z-40 hidden md:flex items-center gap-3 px-4 py-2 rounded-full glass">
+      {/* <div className="absolute top-5 right-6 z-40 hidden md:flex items-center gap-3 px-4 py-2 rounded-full glass">
         <span className="text-xs uppercase tracking-[0.25em] text-muted-foreground">
           {String(indexOf(active) + 1).padStart(2, "0")}
         </span>
@@ -89,7 +93,7 @@ export function Portfolio() {
         <span className="text-xs uppercase tracking-[0.25em]">
           {sections[indexOf(active)].label}
         </span>
-      </div>
+      </div> */}
 
       <SidePager active={active} onSelect={goTo} />
 
